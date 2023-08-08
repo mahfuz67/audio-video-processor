@@ -26,6 +26,8 @@ $ git clone https://github.com/mahfuz67/audio-video-processor
 ```
 
 Copy the .env.example file to .env and fill in the values.
+You must have progresSQL installed and running on your machine.
+Replace user, password, host, and database_name in the DATABASE_URL and POSTGRES_DB, POSTGRES_USER, POSTGRES_PASSWORD environment variable with your actual PostgreSQL connection details.
 
 Run prisma migrations
 
@@ -34,7 +36,6 @@ $ npm run migrate:dev
 ```
 
 Run app locally
-
 
 ```bash
 $ npm run dev:migrate:dev
