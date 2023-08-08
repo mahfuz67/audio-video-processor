@@ -22,7 +22,7 @@ $ npm install
 Clone the project
 
 ```bash
-$ git clone https://link-to-project
+$ git clone https://github.com/mahfuz67/audio-video-processor
 ```
 
 Copy the .env.example file to .env and fill in the values.
