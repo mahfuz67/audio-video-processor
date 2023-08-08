@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum AssetType {
+  IMAGE
+  VIDEO
+}
+
+model Asset {
+  assetId        String           @id @default(cuid())
+  filename       String
+  fileType       AssetType
+  createdAt      DateTime         @default(now())
+  updatedAt      DateTime         @updatedAt
+  processedAsset ProcessedAsset[]
+
+  @@map("assets")
+}
+
+model ProcessedAsset {
+  assetId         String   @id @default(cuid())
+  filename        String
+  originalAssetId String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  originalAsset   Asset    @relation(fields: [originalAssetId], references: [assetId])
+
+  @@map("processed_assets")
+}

@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "module": "CommonJS",
+    "target": "es6",
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "alwaysStrict": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false,
+    "noImplicitThis": true,
+    "resolveJsonModule": true,
+    "strictBindCallApply": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "lib": ["dom", "scripthost", "es2015", "es2016", "es2017"],
+    "outDir": "dist",
+    "rootDir": "src",
+    "rootDirs": ["."],
+    "baseUrl": ".",
+    "typeRoots": ["types", "src/@types", "node_modules/@types"],
+    "paths": {}
+  },
+  "exclude": [
+    ".vscode",
+    "generated",
+    "node_modules",
+    "**/.git",
+    "types",
+    "dist",
+    "tmp"
+  ]
+}
